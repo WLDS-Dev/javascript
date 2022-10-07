@@ -1,21 +1,14 @@
-function carregar () {
-var msg = window.document.getElementById('msg')
-var img = window.document.getElementById('imagem')
-var data = new Date()
-var hora = data.getHours() 
-msg.innerHTML = `Agora são ${hora} horas.`
-if (hora >= 0 && hora < 12) { 
-    img.src = 'imagens/manha.png'
-    document.body.style.background = '#a0c8c8'
-
-    } else if (hora >= 12 && hora < 18) {  
-        img.src = 'imagens/tarde.png'
-        document.body.style.background = '#bd7443'
-
+function verificar () {
+    var data = new Date()
+    var ano = data.getFullYear()
+    var fano = document.getElementById('txtano')
+    var res = document.querySelector('div#res')
+    if (fano.value.length == 0 || fano.value > ano) {
     } else {
-        img.src = 'imagens/noite.png'
-        document.body.style.background = '#256a86'
+        window.alert('tudo ok')
     }
-
+    
 }
+
+
 
